@@ -9,7 +9,7 @@ export class LoginComponent implements OnInit {
 
   aim="Your Perfect Banking Partner";
 
-  accno="Account Number Please";
+  acno="Account Number Please";
 
   pswd="";
 
@@ -25,22 +25,24 @@ export class LoginComponent implements OnInit {
   }
 
 
-  accnoChange(event:any){
-    this.accno=event.target.value;
-    console.log( this.accno);
-  }
+  // accnoChange(event:any){
+  //   this.accno=event.target.value;
+  //   console.log( this.accno);
+  // }
 
-  pswdChange(event:any){
-    this.pswd=event.target.value;
-    console.log( this.pswd);
-  }
+  // pswdChange(event:any){
+  //   this.pswd=event.target.value;
+  //   console.log( this.pswd);
+  // }
 
-  login(){
+  login(a:any,p:any){
    
-    var acno =  this.accno;
-    var pswd = this.pswd;
-    let users = this.accountDetails;
+    //console.log(a);
+    var acno =  a.value;
     
+    var pswd = p.value;
+    let users = this.accountDetails;
+
     if (acno in users) {
         if (pswd == users[acno]["password"]) {
           alert("Login Successful");
