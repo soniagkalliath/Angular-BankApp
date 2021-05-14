@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            
+            <div class="main">
+                <h4>Welcome To YES Bank <br>
+                <h5>{{aim}}</h5> </h4><br>
+            
+            
+            
+            <input id="accnotext" type="text" class="text" [value]="accno" (change)="accnoChange($event)" placeholder="Account number"><br><br>
+            
+            <input id="pwdtext" type="password" class="text" (change)="pswdChange($event)" placeholder="Password" ><br> <br>
+            
+            <input type="button" value="Log In" class="button butefct" (click)="login()"> <br>
+           
+                <a class="textfp" href="#">Forgotten password?</a>
+           <div class="line"></div>
+                <input type="button" value="Create New Account" class="button button1 butefct"> <br><br>
+        
+        </div>
+        </div>
+    
+        <div class="col-4"></div>
+    </div>
+</div>

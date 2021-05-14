@@ -1,0 +1,22 @@
+Angular - Features
+
+1. Component (root module - App Component)
+
+2. Module (root module - App Module)
+
+3. Data Binding
+    3.1 One Way Binding
+
+        3.1.1. Component to View data Binding
+
+             3.1.1.1 String Interpolation / Interpolation : {{expression}}
+              3.1.1.2 Property Binding [Binding-target]="Binding-source"
+
+         3.1.2. View to Component data Binding
+
+            3.1.2.1 Event Binding (event)="fun call"
+            3.1.2.2 Event Binding by passing argument as $event (event)="fun-call($event)"
+            3.1.2.3 Event Binding using template referencing #variable-name
+
+
+    3.2 Two way Binding
