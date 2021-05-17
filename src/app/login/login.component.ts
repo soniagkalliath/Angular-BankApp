@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   acno="Account Number Please";
 
   pswd="";
+  //  LOGO = require("./assets/flower.png");
 
    accountDetails:any= {
     1000: { acno: 1000, username: "userone", password: "userone", balance: 50000 },
@@ -35,12 +36,12 @@ export class LoginComponent implements OnInit {
   //   console.log( this.pswd);
   // }
 
-  login(a:any,p:any){
+  login(){
    
     //console.log(a);
-    var acno =  a.value;
+    var acno =  this.acno;
+    var pswd = this.pswd;
     
-    var pswd = p.value;
     let users = this.accountDetails;
 
     if (acno in users) {

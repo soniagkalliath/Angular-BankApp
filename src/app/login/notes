@@ -1,16 +1,17 @@
-Angular - Features
-
+            Angular - Features
+--------------------------------------------
 1. Component (root module - App Component)
 
 2. Module (root module - App Module)
 
 3. Data Binding
+
     3.1 One Way Binding
 
         3.1.1. Component to View data Binding
 
              3.1.1.1 String Interpolation / Interpolation : {{expression}}
-              3.1.1.2 Property Binding [Binding-target]="Binding-source"
+             3.1.1.2 Property Binding [Binding-target]="Binding-source"
 
          3.1.2. View to Component data Binding
 
@@ -20,3 +21,5 @@ Angular - Features
 
 
     3.2 Two way Binding
+
+        3.2.1. ngModel - FormsModule
