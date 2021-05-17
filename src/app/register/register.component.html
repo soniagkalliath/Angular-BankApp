@@ -5,19 +5,19 @@
             
             <div class="main">
                 <h4>Welcome To YES Bank <br>
-                <h5>{{aim}}</h5> </h4><br>
+                <h5>Register Form</h5> </h4><br>
            
-            
+                <input id="uname" type="text" class="text"  [(ngModel)]= "uname" placeholder="User Name"><br><br>
             
             <input id="accnotext" type="text" class="text"  [(ngModel)]= "acno" placeholder="Account number"><br><br>
             
             <input id="pwdtext" type="password" class="text" [(ngModel)]= "pswd" placeholder="Password" ><br> <br>
             
-            <input type="button" value="Log In" class="button butefct" (click)="login()"> <br>
+            
            
-                <a class="textfp" routerLink="register">Forgotten password?</a>
+               
            <div class="line"></div>
-                <input type="button" value="Create New Account" (click)="register()"class="button button1 butefct"> <br><br>
+                <input type="button" value="Register" (click)="register()"class="button button1 butefct"> <br><br>
         
         </div>
         </div>

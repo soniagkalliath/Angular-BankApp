@@ -22,4 +22,9 @@
 
     3.2 Two way Binding
 
-        3.2.1. ngModel - FormsModule
+        3.2.1. ngModel -  [(ngModel)]="value"
+
+    4. Angular Routing
+
+
+    5. Dependency Injection / Inversion of Control

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,33 +13,20 @@ export class LoginComponent implements OnInit {
   acno="Account Number Please";
 
   pswd="";
-  //  LOGO = require("./assets/flower.png");
-
+  
    accountDetails:any= {
     1000: { acno: 1000, username: "userone", password: "userone", balance: 50000 },
     1001: { acno: 1001, username: "usertwo", password: "usertwo", balance: 5000 },
     1002: { acno: 1002, username: "userthree", password: "userthree", balance: 10000 },
     1003: { acno: 1003, username: "userfour", password: "userfour", balance: 6000 }
 }
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-
-
-  // accnoChange(event:any){
-  //   this.accno=event.target.value;
-  //   console.log( this.accno);
-  // }
-
-  // pswdChange(event:any){
-  //   this.pswd=event.target.value;
-  //   console.log( this.pswd);
-  // }
-
-  login(){
+    login(){
    
-    //console.log(a);
+   
     var acno =  this.acno;
     var pswd = this.pswd;
     
@@ -47,6 +35,7 @@ export class LoginComponent implements OnInit {
     if (acno in users) {
         if (pswd == users[acno]["password"]) {
           alert("Login Successful");
+          this.router.navigateByUrl("dashboard");
         }
         else {
           alert("Incorrect Password");
@@ -55,5 +44,10 @@ export class LoginComponent implements OnInit {
     else {
       alert("Invalid Account");
     }
+  }
+
+
+  register(){
+    this.router.navigateByUrl("register");
   }
 }
