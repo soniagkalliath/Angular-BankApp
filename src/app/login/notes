@@ -24,7 +24,10 @@
 
         3.2.1. ngModel -  [(ngModel)]="value"
 
+
     4. Angular Routing
 
 
     5. Dependency Injection / Inversion of Control
+
+    6. Services
