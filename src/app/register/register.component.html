@@ -5,17 +5,17 @@
             
             <div class="main">
                 <h4>Welcome To YES Bank <br>
+
                 <h5>Register Form</h5> </h4><br>
 
-           <form (ngSubmit)="register()">
+           <form [formGroup]="registerForm" (ngSubmit)="register()">
 
-               <input id="uname" type="text" class="text" name="uname"  [(ngModel)]= "uname" placeholder="User Name"><br><br>
+               <input id="uname" type="text" class="text" name="uname"  formControlName= "uname" placeholder="User Name">
+            <div class="error">Invalid UserName</div><br>
+            <input id="accnotext" type="text" class="text" name="acno" formControlName= "acno" placeholder="Account number"><br><br>
             
-            <input id="accnotext" type="text" class="text" name="acno" [(ngModel)]= "acno" placeholder="Account number"><br><br>
-            
-            <input id="pwdtext" type="password" class="text" name="pswd" [(ngModel)]= "pswd" placeholder="Password" ><br> <br>
-            
-            
+            <input id="pwdtext" type="password" class="text" name="pswd" formControlName= "pswd" placeholder="Password" ><br> <br>
+                     
            
                
            <div class="line"></div>

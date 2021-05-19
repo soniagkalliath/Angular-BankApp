@@ -32,8 +32,15 @@
 
     6. Services
 
-    7. Model Driven Forms ---- Reactive Forms
+    7. Angular Forms
 
-        7.1 Form Group
-        7.2 Form Array
-        7.3 Form COntrol
+        7.1 Template Driven Froms
+
+        7.2  Model Driven Forms ---- Reactive Forms
+    
+            7.2.1 Form Group
+            7.2.2 Form Array
+            7.2.3 Form Control
+   
+
+       
