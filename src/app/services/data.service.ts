@@ -33,10 +33,10 @@ export class DataService {
   }
 
   login(acno:any,pswd:any){
-    let users = this.accountDetails;
+    let user = this.accountDetails;
 
-    if (acno in users) {
-        if (pswd == users[acno]["password"]) {
+    if (acno in user) {
+        if (pswd == user[acno]["password"]) {
           return true;
          
         }
@@ -51,5 +51,55 @@ export class DataService {
     }
   }
 
+
+deposit(acno:any,pswd:any,amt:any){
+
+  var amount = parseInt(amt);
+  let user = this.accountDetails;
+  if(acno in user){
+    if (pswd == user[acno]["password"]) {
+      user[acno]["balance"]+=amount;
+      return user[acno]["balance"];
+    }
+    else{
+      alert("Incorrect Password");
+      return false;
+    }
+  }
+  else{
+    alert("Invalid Account");
+    return false;
+  }
+
+}
+
+
+withdraw(acno:any,pswd:any,amt:any){
+
+  var amount = parseInt(amt);
+  let user = this.accountDetails;
+  if(acno in user){
+    if (pswd == user[acno]["password"]) {
+
+      if(user[acno]["balance"] > amount){
+        user[acno]["balance"]-=amount;
+        return user[acno]["balance"];
+      }
+     else{
+       alert("Insufficient Balance");
+       return false;
+     }
+    }
+    else{
+      alert("Incorrect Password");
+      return false;
+    }
+  }
+  else{
+    alert("Invalid Account");
+    return false;
+  }
+
+}
 
 }

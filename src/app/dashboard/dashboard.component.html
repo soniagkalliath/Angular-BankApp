@@ -6,13 +6,13 @@
             
             <div class="main">
                 <h4>Deposit Form</h4><br>
-            <form action="#">
+            <form (ngSubmit)="deposit()">
             
             
-            <input id="log" type="text" class="text" placeholder="Account number"><br><br>
+            <input id="log" type="text" class="text" name = "accno" [(ngModel)]="dAccno" placeholder="Account number"><br><br>
             
-            <input id="pass" type="password" class="text" placeholder="Password" ><br> <br>
-            <input id="amo" type="text" class="text" placeholder="Amount"><br><br>
+            <input id="pass" type="password" class="text" name="pswd" [(ngModel)]="dPswd" placeholder="Password" ><br> <br>
+            <input id="amo" type="text" class="text" name=" amount" [(ngModel)]="dAmount" placeholder="Amount"><br><br>
             <input type="submit" value="Deposit" class="button button1 butefct" > <br><br>
         </form>
         </div>  
@@ -28,13 +28,13 @@
         <div class="col-4">
             <div class="main">
                 <h4>Withdraw Form</h4><br>
-    <form action="#">
+    <form (ngSubmit)="withdraw()">
             
             
-        <input id="log" type="text" class="text" placeholder="Account number"><br><br>
+        <input id="log" type="text" class="text" name = "accno" [(ngModel)]="wAccno" placeholder="Account number"><br><br>
         
-        <input id="pass" type="password" class="text" placeholder="Password" ><br> <br>
-        <input id="amo" type="text" class="text" placeholder="Amount"><br><br>
+        <input id="pass" type="password" class="text" name="pswd" [(ngModel)]="wPswd" placeholder="Password" ><br> <br>
+        <input id="amo" type="text" class="text" name=" amount" [(ngModel)]="wAmount"  placeholder="Amount"><br><br>
         <input type="submit" value="Withdrawal" class="button butefct" > <br><br>
         </form></div>
 </div>
