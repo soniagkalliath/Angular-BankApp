@@ -42,5 +42,17 @@
             7.2.2 Form Array
             7.2.3 Form Control
    
+    8. Angular Directives
 
-       
+        8.1 Component Directives
+        8.2 Attribute Directives
+        8.3 Structural Directives (* symbol)
+            8.3.1 *ngIf(expr)
+            8.3.2 ngFor
+            8.3.3 ngSwitch
+            
+    9. Local Storage
+
+            9.1 setItem
+            9.2 getItem
+            9.3 removeItem

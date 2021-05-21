@@ -7,16 +7,20 @@
                 <h4>Welcome To YES Bank <br>
                 <h5>{{aim}}</h5> </h4><br>
            
-            <form (ngSubmit)="login()">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
             
-            <input id="accnotext" type="text" class="text" name="acno" [(ngModel)]= "acno" placeholder="Account number"><br><br>
+            <input id="accnotext" type="text" class="text" name="acno" formControlName= "acno" placeholder="Account number"><br>
+            <div *ngIf="(loginForm.get('acno')?.touched || loginForm.get('acno')?.dirty) && loginForm.get('acno')?.errors" class="error">Invalid Account Number</div><br>
             
-            <input id="pwdtext" type="password" class="text" name ="pswd" [(ngModel)]= "pswd" placeholder="Password" ><br> <br>
-            
+            <input id="pwdtext" type="password" class="text" name ="pswd" formControlName= "pswd" placeholder="Password" ><br> 
+            <div *ngIf="(loginForm.get('pswd')?.touched || loginForm.get('pswd')?.dirty) && loginForm.get('pswd')?.errors" class="error">Invalid Password</div><br> 
+
             <input type="submit" value="Log In" class="button butefct" > <br>
            
                 <a class="textfp" routerLink="register">Forgotten password?</a>
            <div class="line"></div>
+
+           
                 <input type="button" value="Create New Account" (click)="register()"class="button button1 butefct"> <br><br>
             </form>
 

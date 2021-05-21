@@ -10,12 +10,14 @@
 
            <form [formGroup]="registerForm" (ngSubmit)="register()">
 
-               <input id="uname" type="text" class="text" name="uname"  formControlName= "uname" placeholder="User Name">
-            <div class="error">Invalid UserName</div><br>
-            <input id="accnotext" type="text" class="text" name="acno" formControlName= "acno" placeholder="Account number"><br><br>
+            <input id="uname" type="text" class="text" name="uname"  formControlName= "uname" placeholder="User Name"><br>
+            <div *ngIf="(registerForm.get('uname')?.touched || registerForm.get('uname')?.dirty) && registerForm.get('uname')?.errors" class="error">Invalid User Name</div><br>
             
-            <input id="pwdtext" type="password" class="text" name="pswd" formControlName= "pswd" placeholder="Password" ><br> <br>
-                     
+            <input id="accnotext" type="text" class="text" name="acno" formControlName= "acno" placeholder="Account number"><br>
+            <div *ngIf="(registerForm.get('acno')?.touched || registerForm.get('acno')?.dirty) && registerForm.get('acno')?.errors" class="error">Invalid Account Number</div><br>
+            
+            <input id="pwdtext" type="password" class="text" name="pswd" formControlName= "pswd" placeholder="Password" ><br> 
+            <div *ngIf="(registerForm.get('pswd')?.touched || registerForm.get('pswd')?.dirty) && registerForm.get('pswd')?.errors" class="error">Invalid Password</div><br>         
            
                
            <div class="line"></div>

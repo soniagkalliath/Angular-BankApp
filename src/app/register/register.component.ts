@@ -16,19 +16,14 @@ registerForm = this.fb.group({
   pswd:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]]
 })
 
-  constructor(private dataService:DataService,private router:Router,private fb:FormBuilder ) { }
+  constructor(private dataService:DataService,private router:Router, private fb:FormBuilder ) { }
 
   ngOnInit(): void {
   }
 
   register(){
     
-console.log(this.registerForm.get('uname')?.errors)
-if(this.registerForm.get('uname')?.errors){
-  alert("Invalid Username ")
-}
-
-    if(this.registerForm.valid){
+   if(this.registerForm.valid){
 
       var uname = this.registerForm.value.uname;
       var acno =this.registerForm.value.acno;
