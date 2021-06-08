@@ -1,6 +1,8 @@
             Angular - Features
 --------------------------------------------
-1. Component (root module - App Component)
+
+
+1. Component (root component - App Component)
 
 2. Module (root module - App Module)
 
@@ -46,13 +48,35 @@
 
         8.1 Component Directives
         8.2 Attribute Directives
+
+            8.2.1 In biult Attribute Directives - ngClass
+
+            8.2.2 User defined Attribute Directives
+
         8.3 Structural Directives (* symbol)
-            8.3.1 *ngIf(expr)
-            8.3.2 ngFor
-            8.3.3 ngSwitch
+            8.3.1 *ngIf="expr"
+            8.3.2 *ngFor
+            8.3.3 *ngSwitch
             
     9. Local Storage
 
             9.1 setItem
             9.2 getItem
             9.3 removeItem
+
+
+    10. HttpClientModule
+
+    11. Child Parent Data Shairing
+
+        11.1 Parent to Child - @Input
+
+        11.2 Child to Parent - @Output
+
+    12. EventEmitter
+
+    13. Angular Pipes
+    
+     expression | pipeOperator [:PipeArguments]
+
+        

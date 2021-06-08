@@ -30,12 +30,19 @@ loginForm = this.fb.group({
     var acno =  this.loginForm.value.acno;
     var pswd = this.loginForm.value.pswd;
     
-    const result = this.dataService.login(acno,pswd)
+    this.dataService.login(acno,pswd)
+    .subscribe((result:any)=>{
+      if(result){
+        alert(result.message);
+        localStorage.setItem("name",result.name);
+        localStorage.setItem("acno",result.acno);
+        this.router.navigateByUrl("dashboard");
+       }
+    },
+    (result)=>{
+      alert(result.error.message)
+    })
 
-    if(result){
-      alert("Login Successful");
-      this.router.navigateByUrl("dashboard");
-    }
    }
    else{
      alert("Invalid Form")

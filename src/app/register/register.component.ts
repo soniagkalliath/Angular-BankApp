@@ -31,15 +31,17 @@ registerForm = this.fb.group({
   
     
   
-     const result = this.dataService.register(uname,acno,pswd)
-  
-     if(result){
-      alert("Successfully Registered...... ");
+     this.dataService.register(uname,acno,pswd)
+  .subscribe((result:any)=>{
+    if(result){
+      alert(result.message);
       this.router.navigateByUrl("");
      }
-     else{
-      alert("User Exists... Please Login")
-     }
+  },
+  (result)=>{
+    alert(result.error.message)
+  })
+    
 
     }
 
